@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - mvn install
+  pre_build:
+    commands:
+      - echo "Running pre-build steps..."
+      - mvn clean
+  build:
+    commands:
+      - echo "Running TestNG tests..."
+      - mvn test
+artifacts:
+  files:
+    - target/surefire-reports/**/*
+  discard-paths: yes
