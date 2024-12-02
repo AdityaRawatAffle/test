@@ -9,4 +9,9 @@ public class myTest {
         System.out.println("test");
     }
 
+    @Test
+    public void testnew(){
+        System.out.println("test new");
+    }
+
 }
